@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CRUD_EFW.Models.Customer>
+@{
+}
+<a asp-action="Create" asp-controller="Customer" class="btn btn-outline-danger">Create</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cust_Name</th>
+                <th>Cust_Email</th>
+                <th>Cust_Address</th>
+                <th>Mobile</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        @foreach (var cust in Model)
+        {
+            <tr>
+                <td>@cust.Id</td>
+                <td>@cust.Cust_Name</td>
+                <td>@cust.Cust_Email</td>
+                <td>@cust.Cust_Address</td>
+                <td>@cust.Mobile</td>
+                <td><a asp-action="Edit" asp-controller="Customer" asp-route-id="@cust.Id">Edit</a>|| 
+                    <a asp-action="Delete" asp-controller="Customer" asp-route-id="@cust.Id" onclick="return confirm('Are you sure to delete this record?')">Delete</a>
+                       </td>
+
+            </tr>
+        }
+    </table>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CRUD_EFW.Models.Department>
+@{
+}
+
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>Department</th>
+
+    </tr>
+    @foreach (var dpt in Model)
+    {
+        <tr>
+            <td>
+                <a asp-action="EmployeeList" asp-controller="Employee" asp-route-Id="@dpt.Id">
+                    @dpt.DName
+                </a>
+            </td>
+
+
+        </tr>
+    }
+</table>

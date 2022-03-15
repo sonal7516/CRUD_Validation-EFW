@@ -1,0 +1,30 @@
+﻿@model CRUD_EFW.Models.Customer
+@{
+}
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <form asp-action="Edit" asp-controller="Customer" method="post">
+            <div class="form-group">
+                <input type="hidden" asp-for="Id"/>
+                <label asp-for="Cust_Name"></label>
+                <input asp-for="Cust_Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cust_Email"></label>
+                <input asp-for="Cust_Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cust_Address"></label>
+                <input asp-for="Cust_Address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile"></label>
+                <input asp-for="Mobile" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

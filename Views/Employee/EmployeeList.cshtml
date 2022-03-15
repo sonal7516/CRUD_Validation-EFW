@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CRUD_EFW.Models.Employee>
+@{
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>EmailId</th>
+            <th>Mobile</th>
+            
+
+        </tr>
+    </thead>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Email</td>
+            <td>@emp.Mobile</td>
+          
+        </tr>
+    }
+</table>
